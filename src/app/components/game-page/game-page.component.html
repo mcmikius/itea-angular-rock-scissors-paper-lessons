@@ -4,7 +4,14 @@
         <mat-card-content>
             <div class="content1">
                 <h2>  You </h2>
-                <button mat-fab color="primary" class="score"></button>
+                <button mat-fab color="primary" class="score">{{ scores[0] }}</button>
+            </div>
+            <h3 > Choose your weapon: </h3>
+            <div  class="content2">
+                <i (click)="choose(0)" [ngClass]="{'selectedWeapon':(playerSelected === 0)}" class="fa fa-hand-rock-o"></i>
+                <i (click)="choose(1)" [ngClass]="{'selectedWeapon':(playerSelected === 1)}"  class="fa fa-hand-paper-o"></i>
+                <i (click)="choose(2)" [ngClass]="{'selectedWeapon':(playerSelected === 2)}"  class="fa fa-hand-scissors-o"></i>
+                <i (click)="choose(3)" [ngClass]="{'selectedWeapon':(playerSelected === 3)}"  class="fa fa-hand-spock-o"></i>
             </div>
         </mat-card-content>
     </mat-card>
@@ -12,11 +19,17 @@
         <mat-card-content>
             <div class="content1">
                 <h2>  Computer </h2>
-                <button mat-fab color="accent" class="score"></button>
-
+                <button mat-fab color="accent" class="score">{{ scores[0] }}</button>
             </div>
+
             <br><br>
+
+            <div *ngIf="enemySelected !== -1" class="flex-container flex-center">
+                <i *ngIf="enemySelected === 0" class="fa fa-hand-rock-o"></i>
+                <i *ngIf="enemySelected === 1"  class="fa fa-hand-paper-o"></i>
+                <i *ngIf="enemySelected === 2" class="fa fa-hand-scissors-o"></i>
+                <i *ngIf="enemySelected === 2" class="fa fa-hand-spock-o"></i>
+            </div>
         </mat-card-content>
     </mat-card>
 </div>
-
