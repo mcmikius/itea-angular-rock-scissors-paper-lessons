@@ -9,6 +9,10 @@ export class AppComponent {
   userName = '';
   isFirstScreen = false;
 
+  ngOnInit() {
+
+
+  }
   auth() {
     this.isFirstScreen = true;
   }
