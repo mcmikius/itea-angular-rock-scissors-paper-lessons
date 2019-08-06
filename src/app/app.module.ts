@@ -11,7 +11,7 @@ import {
     MatProgressSpinnerModule,
     MatToolbarModule
 } from "@angular/material";
-import { GamePageComponent } from './components/game-page/game-page.component';
+import GamePageComponent from './components/game-page/game-page.component';
 
 @NgModule({
   declarations: [
