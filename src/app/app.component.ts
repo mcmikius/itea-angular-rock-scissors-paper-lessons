@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Rock Paper Scissors Lizard Spock';
+  desc = 'The Rock Paper Scissors Game plus Lizard Spock';
 }
