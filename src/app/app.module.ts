@@ -9,11 +9,12 @@ import {
   MatToolbarModule,
   MatGridListModule,
   MatBadgeModule,
-  MatButtonModule, MatCardModule, MatDividerModule
+  MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule
 } from '@angular/material';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { GameComponent } from './game/game.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { GameComponent } from './game/game.component';
     MatButtonModule,
     FontAwesomeModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

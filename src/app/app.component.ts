@@ -9,6 +9,13 @@ export class AppComponent implements OnInit {
   title = 'Rock Paper Scissors Lizard Spock';
   desc = 'The Rock Paper Scissors Game plus Lizard Spock';
 
+  userName = '';
+  isFirstScreen = false;
+
+  auth() {
+    this.isFirstScreen = true;
+  }
+
   constructor() { }
 
   ngOnInit() {
