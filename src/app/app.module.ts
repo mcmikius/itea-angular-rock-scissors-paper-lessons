@@ -13,10 +13,12 @@ import {
 } from '@angular/material';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
