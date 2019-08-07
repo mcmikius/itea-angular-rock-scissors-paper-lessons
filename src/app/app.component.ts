@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { faHandScissors } from '@fortawesome/free-solid-svg-icons';
+import { faHandLizard } from '@fortawesome/free-solid-svg-icons';
+import { faHandPaper } from '@fortawesome/free-solid-svg-icons';
+import { faHandRock } from '@fortawesome/free-solid-svg-icons';
+import { faHandSpock } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +13,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Rock Paper Scissors Lizard Spock';
   desc = 'The Rock Paper Scissors Game plus Lizard Spock';
+  faHandScissors = faHandScissors;
+  faHandLizard = faHandLizard;
+  faHandPaper = faHandPaper;
+  faHandRock = faHandRock;
+  faHandSpock = faHandSpock;
   weapons = [
     'rock',
     'paper',
@@ -20,7 +30,7 @@ export class AppComponent {
   scores = [0 , 0];
   result = 4;
   resultStrings = [
-    'TEI',
+    'TIE',
     'PLAYER WIN',
     'COMPUTER WIN',
     ''
@@ -47,7 +57,7 @@ export class AppComponent {
       this.scores[1] += 1;
       this.result = 2;
     }
-    this.resultMessage = 'Computer chooses ' + this.weapons[this.computerWeapon] + ' ||| '  + this.resultStrings[this.result];
+    this.resultMessage = 'Computer chooses ' + this.weapons[this.computerWeapon] + ' - '  + this.resultStrings[this.result];
   }
 
 }
