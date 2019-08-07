@@ -9,7 +9,7 @@ import {
   MatToolbarModule,
   MatGridListModule,
   MatBadgeModule,
-  MatButtonModule
+  MatButtonModule, MatCardModule, MatDividerModule
 } from '@angular/material';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -26,7 +26,9 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     MatGridListModule,
     MatBadgeModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

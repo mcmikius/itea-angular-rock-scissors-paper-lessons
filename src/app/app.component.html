@@ -1,9 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <mat-toolbar-row>
+    <span>
+      Welcome to {{ title }}!
+    </span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+      <span>
+        {{ desc }}
+      </span>
+  </mat-toolbar-row>
 </mat-toolbar>
-<mat-grid-list cols="1" rowHeight="2em">
-  {{ desc }}
+
+<mat-divider [inset]="true"></mat-divider>
+<mat-grid-list cols="2" rowHeight="4em">
+  <mat-grid-tile>
+    <mat-card>
+    <h2 matBadge="{{ scores[0] }}" matBadgeColor="accent">Your score</h2>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card>
+    <h2 matBadge="{{ scores[1] }}" matBadgeColor="accent">Computer score</h2>
+    </mat-card>
+  </mat-grid-tile>
 </mat-grid-list>
