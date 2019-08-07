@@ -4,6 +4,9 @@ import { faHandLizard } from '@fortawesome/free-solid-svg-icons';
 import { faHandPaper } from '@fortawesome/free-solid-svg-icons';
 import { faHandRock } from '@fortawesome/free-solid-svg-icons';
 import { faHandSpock } from '@fortawesome/free-solid-svg-icons';
+import { EWeapons } from './weapons.enum';
+import { EResultStrings } from './result-strings.enum';
+
 
 @Component({
   selector: 'app-root',
@@ -18,23 +21,12 @@ export class AppComponent {
   faHandPaper = faHandPaper;
   faHandRock = faHandRock;
   faHandSpock = faHandSpock;
-  weapons = [
-    'rock',
-    'paper',
-    'scissors',
-    'spock',
-    'lizard'
-  ];
+  weapons = EWeapons;
   playerWeapon = 0;
   computerWeapon = 0;
   scores = [0 , 0];
   result = 4;
-  resultStrings = [
-    'TIE',
-    'PLAYER WIN',
-    'COMPUTER WIN',
-    ''
-  ];
+  resultStrings = EResultStrings;
   resultMessage = 'AWAITING GAME COMMENCEMENT';
 
   chooseWeapon( weapon: number): void {
