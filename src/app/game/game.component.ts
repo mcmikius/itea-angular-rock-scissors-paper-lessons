@@ -1,6 +1,4 @@
-
-
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { faHandScissors } from '@fortawesome/free-solid-svg-icons';
 import { faHandLizard } from '@fortawesome/free-solid-svg-icons';
 import { faHandPaper } from '@fortawesome/free-solid-svg-icons';
@@ -16,8 +14,7 @@ import { EResultStrings} from '../enums/result-strings.enum';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent {
-  title = 'Rock Paper Scissors Lizard Spock';
-  desc = 'The Rock Paper Scissors Game plus Lizard Spock';
+  @Input() userName;
   faHandScissors = faHandScissors;
   faHandLizard = faHandLizard;
   faHandPaper = faHandPaper;

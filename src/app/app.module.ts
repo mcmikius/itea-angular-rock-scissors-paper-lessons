@@ -9,7 +9,7 @@ import {
   MatToolbarModule,
   MatGridListModule,
   MatBadgeModule,
-  MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule
+  MatButtonModule, MatCardModule, MatDividerModule, MatFormFieldModule, MatInputModule
 } from '@angular/material';
 
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -33,7 +33,8 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

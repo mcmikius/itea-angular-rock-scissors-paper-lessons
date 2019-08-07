@@ -1,22 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>
-      Welcome to {{ title }}!
-    </span>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-      <span>
-        {{ desc }}
-      </span>
-  </mat-toolbar-row>
-</mat-toolbar>
-
 <mat-divider [inset]="true"></mat-divider>
 <mat-grid-list cols="2" rowHeight="4em">
   <mat-grid-tile>
     <mat-card>
-      <h2 matBadge="{{ scores[0] }}" matBadgeColor="accent">Your score</h2>
+      <h2 matBadge="{{ scores[0] }}" matBadgeColor="accent">Your score {{userName}}</h2>
     </mat-card>
   </mat-grid-tile>
   <mat-grid-tile>
@@ -59,6 +45,4 @@
     </ul>
   </mat-grid-tile>
 </mat-grid-list>
-
-<router-outlet></router-outlet>
 

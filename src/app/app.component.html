@@ -1,36 +1,35 @@
-<div *ngIf="!isFirstScreen" class="wrapper">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
     <span>
       Welcome to {{ title }}!
     </span>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
       <span>
         {{ desc }}
       </span>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <mat-card>
-    <form>
-      <div>
-        <h1>Welcome to rock, paper, scissors, lizard, spock game!</h1>
-      </div>
-      <div>
-        <label>
-          Type your name
-        </label>
-      </div>
-      <div>
-        <mat-form-field>
-          <input matInput placeholder="Your name" [(ngModel)]="userName" type="text" />
-        </mat-form-field>
-      </div>
-      <div>
-        <button mat-raised-button color="primary" (click)="auth()" routerLink="/game-page">
-          START GAME
-        </button>
-      </div>
-    </form>
-  </mat-card>
-</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-card *ngIf="!isFirstScreen">
+  <div>
+    <h1>Welcome to rock, paper, scissors, lizard, spock game!</h1>
+  </div>
+  <div>
+    <label>
+      Type your name
+    </label>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Your name" [(ngModel)]="userName" type="text"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="auth()" routerLink="/game-page">
+      START GAME
+    </button>
+  </div>
+</mat-card>
+
+<app-game *ngIf="isFirstScreen" [userName]="userName"></app-game>
